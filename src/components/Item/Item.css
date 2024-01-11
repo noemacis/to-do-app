@@ -1,0 +1,39 @@
+.item-body {
+    background-color: #fdebd3ac;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: 28rem;
+
+}
+
+.body {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.icona {
+    max-height: 10px;
+    max-width: 30px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.testo {
+    padding: 10px;
+    text-align: center;
+    color: #264e70;
+    width: 500;
+}
