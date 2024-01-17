@@ -8,23 +8,23 @@ import { stat } from "fs/promises";
 
 
 function ItemsList(props: any) {
+
   const [list, setList] = useState<any[]>([]);
   const [filter, setFilter] = useState<string>('all');
+  let updatedList = [...list];
 
   useEffect(() => {
     setList(props.items);
   }, [props.items]);
 
 
-  let handleDelete = (id: any) => {
-    const updatedList = [...list];
+  let handleDelete = (id: number) => {
     updatedList.splice(id, 1);
+    list.splice(id, 1);
     setList(updatedList);
-
   }
 
   const setUpdate = (updatedTitle: string, id: number) => {
-    const updatedList = [...list];
     updatedList[id] = updatedTitle;
     setList(updatedList);
 
@@ -42,7 +42,6 @@ function ItemsList(props: any) {
             item={item}
             onClick={handleDelete}
             setUpdate={setUpdate}
-          //complete={handleFilterChange}
           />))}
       </div>
     </>

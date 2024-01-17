@@ -12,10 +12,10 @@ import { randomUUID } from 'crypto';
 
 function App() {
 
-  const [tasks, setTask] = useState<string[]>([]);
+
   const aggiungi = (ts: string) =>
     setTask(prevTask => [...prevTask, ts]);
-
+  const [tasks, setTask] = useState<string[]>([]);
 
   return (
     <>
