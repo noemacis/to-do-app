@@ -15,7 +15,7 @@ function ItemsList(props: any) {
 
   useEffect(() => {
     setList(props.items);
-  }, [props.items]);
+  }, [props.items, updatedList]);
 
 
   let handleDelete = (id: number) => {
@@ -35,7 +35,7 @@ function ItemsList(props: any) {
   return (
     <>
       <div className="mt-2">
-        {list.map((item: any, index: number) => (
+        {updatedList.map((item: any, index: number) => (
           <Item
             key={index}
             id={index}
