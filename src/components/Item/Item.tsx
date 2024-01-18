@@ -25,7 +25,6 @@ function Item(props: any) {
         if (event.key === 'Enter') {
             setEditing(!editing);
         }
-        console.log('hanleUpdateDone key : ' + event.key);
     }
 
 
@@ -39,6 +38,7 @@ function Item(props: any) {
                     >
                         <input type="checkbox" className='col-2 checkBox'
                             onClick={handleCheck}
+                            onChange={props.filter(completed, props.id)}
                         //onChange={props.complete(completed, props.id, props.item)}
                         />
                         <div className='col-7 testo d-flex align-items-center' >{props.item}</div>
